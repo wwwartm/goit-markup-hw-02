@@ -6,7 +6,7 @@
     --logo-second-color: #000;
     --footer-adress-color: rgba(255, 255, 255, 0.6);
     --background-color: #2F303A;
-    --filter-button-color: #F5F4FA;
+    --second-bcgr-color: #F5F4FA;
 }
 
 body {
@@ -34,6 +34,7 @@ button {
     line-height: 1.2;
     text-decoration: none;
     color: var(--active-color);
+    
 }
 .logo .logo-header-color {
     color: var(--logo-second-color);
@@ -51,14 +52,18 @@ button {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-.nav-link.active {
-    color: var(--active-color);
-}
+
 .nav-mail,
 .nav-phone {
     color: var(--text-color);
 }
-.nav-mail:hover {
+.nav-link.active,
+.nav-link:hover,
+.nav-mail:hover,
+.nav-phone:hover,
+.nav-link:focus,
+.nav-mail:focus,
+.nav-phone:focus {
     color: var(--active-color);
 }
 
@@ -72,7 +77,8 @@ button {
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
-    color: var(--invert-active-color);  
+    color: var(--invert-active-color);
+    text-transform: uppercase;
 }
 .hero-button {
     font-family: 'Roboto', sans-serif;
@@ -91,8 +97,17 @@ button {
 
 /* Hidden title */
 .hidden-title {
-    visibility: hidden;
-}
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    }
 
 /* Our advantages style */
 .advantages-list h3 {
@@ -100,6 +115,7 @@ button {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+    text-transform: uppercase;
 }
 .advantages-list p {
     color: var(--text-color);
@@ -118,6 +134,9 @@ button {
 }
 
 /* Our team */
+.our-team {
+    background-color: var(--second-bcgr-color);
+}
 .team-list h3 {
     color: var(--headers-color);
     font-weight: 500;
@@ -134,7 +153,7 @@ button {
 /* Filter buttons */
 .filter-buttons button {
     color: var(--headers-color);
-    background-color: var(--filter-button-color);
+    background-color: var(--second-bcgr-color);
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -181,4 +200,12 @@ button {
 .footer-mail-row,
 .footer-tel-row {
     color: var(--footer-adress-color);
+}
+.footer-address-row:hover,
+.footer-mail-row:hover,
+.footer-tel-row:hover,
+.footer-address-row:focus,
+.footer-mail-row:focus,
+.footer-tel-row:focus {
+    color: var(--active-color);
 }
