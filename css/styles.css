@@ -52,11 +52,32 @@ button {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
+.header {
+    display: flex;
+    width: 100%;
+    justify-items: end;
+}
+.header ul {
+    display: flex;
+    justify-content: right;
+}
+nav {
+    display: flex;
+}
+.top-menu {
+    display: flex;
+    
+}
+.top-menu li {
+    margin-left: 30px;
+}
 
 .nav-mail,
 .nav-phone {
     color: var(--text-color);
+    
 }
+
 .nav-link.active,
 .nav-link:hover,
 .nav-mail:hover,
@@ -67,9 +88,11 @@ button {
     color: var(--active-color);
 }
 
+
 /* Hero section style */
 .hero {
-    background-color: var(--background-color);  
+    background-color: var(--background-color);
+      
 }
 .hero-title {
     font-weight: 900;
@@ -110,17 +133,26 @@ button {
     }
 
 /* Our advantages style */
+.advantages-list,
+.our-directions-list,
+.team-list {
+    display: flex;
+    justify-content: space-between;
+}
+
 .advantages-list h3 {
     color: var(--headers-color);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+    text-align: center;
 }
 .advantages-list p {
     color: var(--text-color);
     font-size: 14px;
     line-height: 1.71;
+    padding: 0,20px,0,20px;
 }
 
 /* Our directions */
